@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Return all the prime numbers in an array</title>
+</head>
+
+<body>
+    <script>
+        //d)Return all the prime numbers in an array
+        //anonymous
+        var primenum = [];
+        var prime = function (arr) {
+            for (var i = 0; i < arr.length; i++) {
+                var isprime = true;
+                for (var a = 2; a <= Math.sqrt(arr[i]); a++) {
+                    if (arr[i] % a === 0 && arr[i]) {
+                        isprime = false;
+                        break;
+                    }
+                }
+                if (isprime === true && arr[i] > 1) {
+                    primenum.push(arr[i]);
+                }
+            }
+            return primenum;
+        }
+        console.log(prime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]));
+    </script>
+</body>
+
+</html>
