@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Rotate an array by k times</title>
+</head>
+
+<body>
+    <script>
+        //h)Rotate an array by k times
+
+        // //anonymous
+        var rotate = function (rotaionarr, k) {
+            var sortedarr = rotaionarr.splice(rotaionarr.length - k);
+            for (var i = 0; i < sortedarr.length; i++) {
+                rotaionarr.splice(i, 0, sortedarr[i]);
+            }
+            return rotaionarr;
+        }
+        console.log(rotate([1, 2, 3, 4, 5, 6, 7, 8], 4))
+    </script>
+</body>
+
+</html>
