@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Return all the palindromes in an array arrow functions.
+        </title>
+    </head>
+    <body>
+        <script>
+
+        //5). Return all the palindromes in an array
+        var palindromeValue = [];
+        ((pali) => {
+            for (var i = 0; i < pali.length; i++) {
+                var stringSplit = pali[i].split('');
+                var stringrev = stringSplit.reverse();
+                var palindromerev = stringrev.join('');
+                if (pali[i] === palindromerev) {
+                    palindromeValue.push(pali[i]);
+                }
+            }
+            console.log(palindromeValue);
+        })(['malayalam', 'mom', 'table', 'dad']);
+        </script>
+    </body>
+</html>
