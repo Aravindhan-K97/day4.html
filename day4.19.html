@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Remove duplicates from an array
+    </title>
+</head>
+
+<body>
+    <script>
+        // g)Remove duplicates from an array
+        //IFFE function
+        var duplicateCheck = (function (duparr) {
+            var noDuplicate = []
+            for (var i = 0; i < duparr.length; i++) {
+                if (noDuplicate.length == 0) {
+                    noDuplicate.push(duparr[i]);
+                }
+                if (noDuplicate.indexOf(duparr[i]) === -1) {
+                    noDuplicate.push(duparr[i])
+                }
+            }
+            return noDuplicate
+        })([1, 2, 3, 4, 5, 2, 6, 7, 8, 9, 6])
+        console.log(duplicateCheck)
+    </script>
+</body>
+
+</html>
