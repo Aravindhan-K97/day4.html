@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Convert all the strings to title caps in a string array arrow functions.
+</title>
+</head>
+<body>
+<script>
+//2).Convert all the strings to title caps in a string array
+((arr) => {
+                    var resultArray = [];
+                    for (var i = 0; i < arr.length; i++) {
+                        var splited = arr[i].toLowerCase().split(" ");
+                        for (var a = 0; a < splited.length; a++) {
+                            var uppercase = splited[a][0].toUpperCase();
+                            var newString = splited[a].slice(1);
+                            splited[a] = uppercase + newString;
+                        }
+                        resultArray.push(splited.join(" "));
+                    }
+                    console.log(resultArray);
+                })(["hi", "hello", "there is a man", "a"]);
+
+</script>
+
+
+</body>
+</html>
