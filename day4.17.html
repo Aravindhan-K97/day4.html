@@ -1,0 +1,25 @@
+<html>
+    <head>
+<title>
+    Return all the palindromes in an array
+</title>
+    </head>
+    <body>
+        <script>
+            //e)Return all the palindromes in an array
+            //IFFE function
+    var palindromeValue = [];
+    (function (pali) {
+        for (var i = 0; i < pali.length; i++) {
+            var stringSplit = pali[i].split('')
+            var stringrev = stringSplit.reverse();
+            var palindromerev = stringrev.join('');
+            if (pali[i] === palindromerev) {
+                palindromeValue.push(pali[i]);
+            }
+        }
+        console.log(palindromeValue);
+    })(['pad', 'mom', 'table', 'chair', 'dad']);
+        </script>
+    </body>
+</html>
