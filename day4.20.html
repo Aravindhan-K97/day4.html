@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>
+        Rotate an array by k times
+    </title>
+</head>
+
+<body>
+    <script>
+        //h)Rotate an array by k times
+        // //IFFE function
+        var rotatedArray = (function (rotaionarr, k) {
+            var sortedarr = rotaionarr.splice(rotaionarr.length - k)
+            for (var i = 0; i < sortedarr.length; i++) {
+                rotaionarr.splice(i, 0, sortedarr[i])
+            }
+            return rotaionarr
+        })([1, 2, 3, 4, 5, 6, 7, 8], 4)
+        console.log(rotatedArray)
+
+    </script>
+</body>
+
+</html>
