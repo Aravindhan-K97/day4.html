@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Return median of two sorted arrays of the same size.</title>
+</head>
+
+<body>
+    <script>
+        //f)Return median of two sorted arrays of the same size.
+
+        // //anonymous
+        var median = function (num1, num2) {
+            var arr = num1.concat(num2);
+            arr.sort();
+            var l = arr.length;
+            if (l % 2 === 0) {
+                return ((arr[l / 2] + arr[l / 2 - 1]) / 2);
+            }
+            else {
+                return arr[Math.floor(l / 2)]
+            }
+        }
+        console.log(median([1, 2, 3, 4], [5, 6, 8]));
+
+    </script>
+</body>
+
+</html>
